@@ -1,0 +1,133 @@
+{
+    "Movement":  {
+                     "Ship":  {
+                                  "Acceleration":  4.0,
+                                  "MaxSpeed":  5.0,
+                                  "TurnSpeed":  2.5,
+                                  "LinearDamping":  0.8,
+                                  "IsWrappedByWorldBounds":  true
+                              },
+                     "Asteroid":  {
+                                      "Acceleration":  0.0,
+                                      "MaxSpeed":  1000.0,
+                                      "TurnSpeed":  0.0,
+                                      "LinearDamping":  0.0,
+                                      "IsWrappedByWorldBounds":  false
+                                  },
+                     "Ufo":  {
+                                 "Acceleration":  2.5,
+                                 "MaxSpeed":  6.0,
+                                 "TurnSpeed":  5.0,
+                                 "LinearDamping":  0.4,
+                                 "IsWrappedByWorldBounds":  true
+                             }
+                 },
+    "BackgroundJitter":  {
+                             "SlowAmplitude":  0.6,
+                             "SlowFrequency":  0.05,
+                             "JitterAmplitude":  0.03,
+                             "JitterFrequency":  8.0,
+                             "ParallaxStrength":  0.3,
+                             "ParallaxResponse":  6.0,
+                             "ParallaxMax":  500.0,
+                             "SmoothTime":  0.2,
+                             "MaxOffset":  500.0,
+                             "UseUnscaledTime":  false
+                         },
+    "ChasingUfo":  {
+                       "TurnKp":  1.0,
+                       "TurnKd":  0.18,
+                       "ThrustKp":  0.6,
+                       "MaxThrust":  0.782,
+                       "AimToleranceDegrees":  30.0,
+                       "MaxLeadSeconds":  0.73,
+                       "MaxFireDistance":  15.0
+                   },
+    "AsteroidsSpawn":  {
+                           "RotationMinDeg":  -5.0,
+                           "RotationMaxDeg":  5.0,
+                           "Interval":  1.6,
+                           "LargeScale":  1.0,
+                           "EdgeOffset":  3.0,
+                           "EntrySpeedMin":  2.0,
+                           "EntrySpeedMax":  5.0,
+                           "EntryAngleJitterDeg":  40.0,
+                           "SmallScale":  0.5,
+                           "SmallSplitMin":  3,
+                           "SmallSplitMax":  5,
+                           "SmallSpeedMin":  4.0,
+                           "SmallSpeedMax":  7.0
+                       },
+    "UfoSpawn":  {
+                     "Scale":  1.0,
+                     "InitialDelay":  2.0,
+                     "Interval":  4.0,
+                     "MaxAlive":  4,
+                     "EdgeOffset":  6.0,
+                     "Speed":  5.0,
+                     "EntryAngleJitterDeg":  15.0
+                 },
+    "Score":  {
+                  "LargeAsteroid":  40,
+                  "SmallAsteroid":  10,
+                  "Ufo":  100
+              },
+    "Weapons":  {
+                    "ShipGun":  {
+                                    "WeaponCooldown":  1.1,
+                                    "MuzzleOffset":  0.5,
+                                    "Spread":  4.0,
+                                    "BulletsPerShot":  3,
+                                    "BulletsInterval":  0.06
+                                },
+                    "ShipLaser":  {
+                                      "WeaponCooldown":  2.0,
+                                      "MuzzleOffset":  0.0,
+                                      "Charges":  2,
+                                      "ChargeRate":  8.0
+                                  },
+                    "ShipPowerShield":  {
+                                             "WeaponCooldown":  0.0,
+                                             "MuzzleOffset":  -1.25,
+                                             "Charges":  1,
+                                             "ChargeRate":  1000.0
+                                         },
+                    "UfoBlaster":  {
+                                       "WeaponCooldown":  1.0,
+                                       "MuzzleOffset":  0.6,
+                                       "Spread":  5.0,
+                                       "BulletsPerShot":  1,
+                                       "BulletsInterval":  0.0
+                                   },
+                    "Attacks":  {
+                                    "BlasterPulse":  {
+                                                         "Size":  {
+                                                                      "X":  0.2,
+                                                                      "Y":  0.2
+                                                                  },
+                                                         "Speed":  8.0,
+                                                         "Lifetime":  3.0
+                                                     },
+                                    "Rocket":  {
+                                                   "Size":  {
+                                                                "X":  0.5,
+                                                                "Y":  0.5
+                                                            },
+                                                   "Speed":  22.0,
+                                                   "Lifetime":  1.5
+                                               },
+                                    "LaserAttack":  {
+                                                        "Length":  40.0,
+                                                        "Width":  0.5,
+                                                        "Duration":  0.4,
+                                                        "AttachMode":  0
+                                                    },
+                                    "PowerShieldAttack":  {
+                                                               "Length":  2.5,
+                                                               "Width":  2.5,
+                                                               "Duration":  3.0,
+                                                               "AttachMode":  0
+                                                    }
+                                }
+                }
+}
