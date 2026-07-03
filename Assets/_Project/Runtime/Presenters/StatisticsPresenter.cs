@@ -1,0 +1,93 @@
+using System;
+using _Project.Runtime.Asteroid;
+using _Project.Runtime.Data;
+using _Project.Runtime.Models;
+using _Project.Runtime.Ufo;
+using Zenject;
+
+namespace _Project.Runtime.Presenters
+{
+    public class StatisticsPresenter : IInitializable, IDisposable
+    {
+        private readonly StatisticsModel _statisticsModel;
+        private readonly GameModel _gameModel;
+        private readonly CombatModel _combatModel;
+        private readonly UfoModel _ufoModel;
+        private readonly AsteroidsModel _asteroidsModel;
+
+        public StatisticsPresenter(
+            StatisticsModel statisticsModel, GameModel gameModel, CombatModel combatModel, UfoModel ufoModel,
+            AsteroidsModel asteroidsModel)
+        {
+            _statisticsModel = statisticsModel;
+            _gameModel = gameModel;
+            _combatModel = combatModel;
+            _ufoModel = ufoModel;
+            _asteroidsModel = asteroidsModel;
+        }
+
+        public void Initialize()
+        {
+            _gameModel.GameStateChanged += OnGameStateChanged;
+
+            _combatModel.ProjectileShot += OnProjectileShot;
+            _combatModel.ProjectileHit += OnProjectileHit;
+            _combatModel.AoeAttackReleased += OnAoeAttackReleased;
+            _combatModel.AoeHit += OnAoeHit;
+
+            _ufoModel.UfoDestroyed += OnUfoDestroyed;
+            _asteroidsModel.AsteroidDestroyed += OnAsteroidDestroyed;
+        }
+
+        public void Dispose()
+        {
+            _gameModel.GameStateChanged -= OnGameStateChanged;
+
+            _combatModel.ProjectileShot -= OnProjectileShot;
+            _combatModel.ProjectileHit -= OnProjectileHit;
+            _combatModel.AoeAttackReleased -= OnAoeAttackReleased;
+            _combatModel.AoeHit -= OnAoeHit;
+
+            _ufoModel.UfoDestroyed -= OnUfoDestroyed;
+            _asteroidsModel.AsteroidDestroyed -= OnAsteroidDestroyed;
+        }
+
+        private void OnAsteroidDestroyed(AsteroidDestroyed obj)
+        {
+            _statisticsModel.AccountAsteroidDestroyed(obj);
+        }
+
+        private void OnUfoDestroyed(UfoDestroyed obj)
+        {
+            _statisticsModel.AccountUfoDestroyed(obj);
+        }
+
+        private void OnAoeHit(AoeHit obj)
+        {
+            _statisticsModel.AccountAoeHit(obj);
+        }
+
+        private void OnAoeAttackReleased(AoeAttackReleased obj)
+        {
+            _statisticsModel.AccountAoeShot(obj);
+        }
+
+        private void OnProjectileHit(ProjectileHit obj)
+        {
+            _statisticsModel.AccountProjectileHit(obj);
+        }
+
+        private void OnProjectileShot(ProjectileShot obj)
+        {
+            _statisticsModel.AccountProjectileShot(obj);
+        }
+
+        private void OnGameStateChanged(GameState state)
+        {
+            if (state is GameState.Preparing or GameState.Gameplay)
+            {
+                _statisticsModel.RefreshStatistics();
+            }
+        }
+    }
+}
