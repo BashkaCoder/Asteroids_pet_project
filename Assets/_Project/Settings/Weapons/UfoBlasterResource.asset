@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4408cf981814402b9509cca1b4a3aa7b, type: 3}
+  m_Name: UfoBlasterResource
+  m_EditorClassIdentifier: Assembly-CSharp::Runtime.Settings.ProjectileWeaponResource
+  <WeaponCooldown>k__BackingField: 1
+  <MuzzleOffset>k__BackingField: 0.6
+  <Projectile>k__BackingField: {fileID: 11400000, guid: 5cbc4340fdb8c1545853f19aee8916da, type: 2}
+  <Spread>k__BackingField: 5
+  <BulletsPerShot>k__BackingField: 1
+  <BulletsInterval>k__BackingField: 0
+  _attackSounds:
+  - {fileID: 8300000, guid: e6330ab6f572a5246b3092102340a796, type: 3}
+  - {fileID: 8300000, guid: d08cdbe66b072ce449dc6cbb74f21331, type: 3}
+  - {fileID: 8300000, guid: 40cd006c87810e0498a97ffab7f9cde0, type: 3}
+  - {fileID: 8300000, guid: aa13ddd5d05350944bed3f3c1c1966fb, type: 3}
+  - {fileID: 8300000, guid: 7d8c97791c75ae2428eed0b161f7cbb5, type: 3}
+  - {fileID: 8300000, guid: 6d782c8376252a4469a16f937ecd2bb4, type: 3}

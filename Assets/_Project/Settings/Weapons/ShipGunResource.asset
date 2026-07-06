@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4408cf981814402b9509cca1b4a3aa7b, type: 3}
+  m_Name: ShipGunResource
+  m_EditorClassIdentifier: Assembly-CSharp::Runtime.Settings.ProjectileWeaponResource
+  <WeaponCooldown>k__BackingField: 1.1
+  <MuzzleOffset>k__BackingField: 0.5
+  <Projectile>k__BackingField: {fileID: 11400000, guid: ab688df7655faff47a2df1a7d0df26a2, type: 2}
+  <Spread>k__BackingField: 4
+  <BulletsPerShot>k__BackingField: 3
+  <BulletsInterval>k__BackingField: 0.06
+  _attackSounds:
+  - {fileID: 8300000, guid: d816504c1acbb3e4fa0e8f91743e537f, type: 3}
+  - {fileID: 8300000, guid: f580e31d0cc59084e8c36bf1cbb219fb, type: 3}
+  - {fileID: 8300000, guid: bec67af07be0d2345a997275bfa1adb9, type: 3}
+  - {fileID: 8300000, guid: 7b71751d2daafa747acd0e0f48e5f5f5, type: 3}

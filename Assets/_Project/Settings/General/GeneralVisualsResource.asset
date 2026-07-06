@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7e2f69018e4d57bd5acb3b6952ba21, type: 3}
+  m_Name: GeneralVisualsResource
+  m_EditorClassIdentifier: Assembly-CSharp::Runtime.Settings.GeneralVisualsResource
+  <ShipDestroyed>k__BackingField: {fileID: 9100000, guid: 31a3ccf3d4b62d043ab09c5707e3b9cc, type: 2}
+  <UfoDestroyed>k__BackingField: {fileID: 9100000, guid: c8f054c0ed678c04f92cc078a59eac14, type: 2}
+  <AsteroidDestroyed>k__BackingField: {fileID: 9100000, guid: 4dc9d91ee67bd9042a3112aef54aaf38, type: 2}
+  <ShipProjectileWeaponIcon>k__BackingField: {fileID: 5117170334197161793, guid: f4dd745325b4d58448aa8cff03b6f743, type: 3}
+  <ShipAoeWeaponIcon>k__BackingField: {fileID: 5588608046750930362, guid: f4dd745325b4d58448aa8cff03b6f743, type: 3}
