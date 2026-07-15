@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: ca1950fe4e18f784c98300ca59ec4d54
   m_currentHash:
     serializedVersion: 2
-    Hash: 742871d2bed9e43edc3d1aaa8c8618f5
+    Hash: 60efa6da1e84fc69602c54e1054c6d02
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
       - m_Id: f2e2bb2a55b6150498421db2a1a82eb0
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: ff46c0622dc0e4040b0518be47cf449a
-        m_Value: 'https://storage.googleapis.com/asteroids_core_game/[BuildTarget]'
+        m_Value: 'https://storage.googleapis.com/asteroids-pet-addressables-bashinskiy/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: 370db7c8059ba0c4287dbe1768cde266
       m_Name: Remote.BuildPath
